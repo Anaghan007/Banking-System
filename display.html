@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Banking System</title>
+</head>
+<style>
+	body
+	{
+		height: 85vh;
+		display: grid;
+		place-items: center;
+	}
+	.h1
+	{
+		margin-left: 550px;
+		margin-bottom: 100px;
+	}
+</style>
+<body>
+	<center>
+		<img src="SBI-Logo.jpg">
+		<h1>Here Is Your Detailes 😊</h1>
+		<p id="here"></p>
+
+		<script>
+			var data = window.location.search;
+			var params = new URLSearchParams(data);
+			console.log(params);
+			var name = params.get("name");
+			var account = params.get("account");
+			var pin = params.get("pin");
+			var amount = params.get("amount"); 
+
+			var getData = "Name : "+name+"<br><br>";
+				getData += "Account Number: "+account+"<br><br>";
+				getData += "Pin : "+pin+"<br><br>";
+				getData += "Amount: "+amount;
+			document.getElementById("here").innerHTML = getData;
+		</script><br><br>
+			<a href="diposit.html">Deposit Here</a> 
+	</center>
+</body>
+</html>
